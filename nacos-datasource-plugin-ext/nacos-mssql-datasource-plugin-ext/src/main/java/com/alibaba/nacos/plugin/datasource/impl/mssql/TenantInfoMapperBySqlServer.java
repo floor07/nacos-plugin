@@ -14,25 +14,20 @@
  * limitations under the License.
  */
 
-package com.alibaba.nacos.plugin.datasource.impl.postgresql;
+package com.alibaba.nacos.plugin.datasource.impl.mssql;
 
-import com.alibaba.nacos.plugin.datasource.TrustedPgSQLFunctionEnum;
 import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
-import com.alibaba.nacos.plugin.datasource.impl.base.BaseGroupCapacityMapper;
+import com.alibaba.nacos.plugin.datasource.impl.base.BaseTenantInfoMapper;
 
 /**
- * The base implementation of GroupCapacityMapper.
+ * The SQL Server implementation of TenantInfoMapper.
  *
- * @author Long Yu
+ * @author QY Li
  **/
-public class GroupCapacityMapperByPostgresql extends BaseGroupCapacityMapper {
-    
+public class TenantInfoMapperBySqlServer extends BaseTenantInfoMapper {
+
     @Override
     public String getDataSource() {
-        return DatabaseTypeConstant.POSTGRESQL;
-    }
-    @Override
-    public String getFunction(String functionName) {
-        return TrustedPgSQLFunctionEnum.getFunctionByName("NOW()");
+        return DatabaseTypeConstant.SQLSERVER;
     }
 }

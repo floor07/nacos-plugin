@@ -31,4 +31,6 @@ public class DatabaseTypeConstant {
     public static final String ORACLE = "oracle";
   
     public static final String DM = "dm";
+
+    public static final String SQLSERVER = "sqlserver";
 }
